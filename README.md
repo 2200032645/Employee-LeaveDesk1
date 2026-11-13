@@ -1,141 +1,106 @@
-## Table of Contents
+# Employee LeaveDesk
 
-1. [Introduction](#officeops-workforce-productivity-suite)
-   - [Deployed Website](#deployed-website)
-   - [Default Credentials](#default-credentials)
-2. [Features](#features)
-   - [CEO Features](#ceo-can)
-   - [Manager Features](#manager-can)
-   - [Employee Features](#employee-can)
-3. [Screenshots](#screenshots)
-4. [Installation](#installation)
-5. [Contributions](#contributions)
-6. [License](#license)
+**A Workforce and Employee Leave Management System**
 
-# OfficeOps: Workforce Productivity Suite
+## Overview
 
-OfficeOps is a powerful Workforce Productivity Suite built using Django, designed to streamline HR and office management processes within your organization. This project allows CEOs, Managers, and Employees to manage various aspects of HR, including employee information, attendance, feedback, and leave requests.
+Employee LeaveDesk is a workforce management application designed to simplify employee administration and leave management. It provides a centralized platform for managing employee information, tracking attendance, handling leave requests, and organizing essential workforce operations.
 
-## Deployed Website
-
-You can access the deployed OfficeOps website at [officeops.onrender.com](https://officeops.onrender.com/).
-
-## Default Credentials
-
-For CEO:
-- Email: admin@admin.com
-- Password: admin
-
-For Manager:
-- Email: manager@manager.com
-- Password: manager
-
-For Employee:
-- Email: employee@employee.com
-- Password: employee
+The project aims to reduce manual administrative work and make employee management more efficient.
 
 ## Features
 
-### CEO Can:
+- **Employee Management:** Maintain and manage employee information.
+- **Attendance Management:** Track employee attendance.
+- **Leave Management:** Submit, manage, and review employee leave requests.
+- **Salary Management:** Organize employee salary-related information.
+- **Feedback Management:** Support employee feedback and communication.
+- **Centralized Dashboard:** Access workforce management information in one place.
 
-- **Manage Your Team:** CEOs have full control to add, update, and remove Managers and Employees within the organization.
+## Technology Stack
 
-- **Organize Company Structure:** CEOs can create and manage Divisions and Departments to structure the company efficiently.
+The technologies should be listed according to the actual implementation:
 
-- **Track Employee Attendance:** Monitor employee attendance to ensure a productive workforce.
+- **Backend:** Python / Django
+- **Database:** PostgreSQL
+- **Frontend:** Add the actual frontend technologies used in this project.
+- **Version Control:** Git and GitHub
 
-- **Engage with Feedback:** Review and respond to feedback from both employees and managers to foster a collaborative workplace.
+## Project Structure
 
-- **Manage Leave Requests:** Approve or reject leave requests from Managers and Employees, ensuring operational continuity.
+The application is organized into modules for managing employee information and workforce operations.
 
-### Manager Can:
+## Installation and Setup
 
-- **Maintain Attendance:** Managers can record and update employee attendance, making it easier to track team productivity.
+### 1. Clone the repository
 
-- **Handle Salaries:** Add or update salary information for employees, streamlining payroll processes.
-
-- **Apply for Leave:** Managers can request time off and have it reviewed by the CEO.
-
-- **Communicate with CEO:** Managers can share feedback and important information directly with the CEO.
-
-### Employee Can:
-
-- **Check Attendance:** Employees can view their attendance records to stay on top of their work hours.
-
-- **Access Salary Information:** Check salary details for transparency and financial planning.
-
-- **Request Leave:** Submit leave requests to the CEO, ensuring seamless time-off management.
-
-- **Connect with CEO:** Employees can provide feedback and share important concerns with the CEO, fostering a culture of open communication.
-
-## Screenshots
-
-| CEO                                        | Manager                                         | Employee                                     |
-|:------------------------------------------:|:-----------------------------------------------:|:--------------------------------------------:|
-| ![CEO_Home](/visuals/ss/CEO_Home.png) | ![Manager_Home](/visuals/ss/Manager_Home.png) | ![Employee_Home](/visuals/ss/Employee_Home.png)   |
-| DashBoard                           | DashBoard                            | DashBoard                              |
-| ![CEO_ManageEmployee](/visuals/ss/CEO_ManageEmployee.png) | ![Manager_AddSalary](/visuals/ss/Manager_AddSalary.png) | ![Employee_ViewSalary](/visuals/ss/Employee_ViewSalary.png)   |
-| Manage Employee                            | Add Salary                            | View Salary                             |
-| ![CEO_ManageManager](/visuals/ss/CEO_ManageManager.png) | ![Manager_TakeAttendance](/visuals/ss/Manager_TakeAttendance.png) | ![Employee_EditProfile](/visuals/ss/Employee_EditProfile.png)   |
-| Manage Manager                            | Take Attendance                            | Edit Profile      
-| ![CEO_EmployeeLeave](/visuals/ss/CEO_EmployeeLeave.png) | ![Manager_ViewAttendance](/visuals/ss/Manager_ViewAttendance.png) | ![Employee_Attendence](/visuals/ss/Employee_Attendence.png)   |
-| Leave Application Reply                           | Update Attendance                            | View Attendance                             |
-| ![CEO_ManagerLeave](/visuals/ss/CEO_ManagerLeave.png) | ![Manager_ApplyForLeave](/visuals/ss/Manager_ApplyForLeave.png) | ![Employee_ApplyForLeave](/visuals/ss/Employee_ApplyForLeave.png)   |
-| Leave Application Response                           | Apply For Leave                           | Apply For Leave                             |
-| ![CEO_EmployeeFeedbackReply](/visuals/ss/CEO_EmployeeFeedbackReply.png) | ![Manager_Feedback](/visuals/ss/Manager_Feedback.png) | ![Employee_Feedback](/visuals/ss/Employee_Feedback.png)   |
-| Feedback                            | Feedback                            | Feedback                             |
-| ![CEO_NotifyManager](/visuals/ss/CEO_NotifyManager.png) | ![Manager_Notification](/visuals/ss/Manager_Notification.png) | ![Employee_Notification](/visuals/ss/Employee_Notification.png)   |
-| Send Notification                            | View Notification                            | View Notification                            |
-
-## Installation
-
-To set up this project on your local machine, follow these steps:
-
-1. Clone the repository:
+```bash
+git clone https://github.com/2200032645/Employee-LeaveDesk1.git
 ```
-git clone https://github.com/Gaurav241/OfficeOps-WPS.git
+
+### 2. Navigate to the project directory
+
+```bash
+cd Employee-LeaveDesk1
 ```
-2. Create a virtual environment and activate it:
-```
+
+### 3. Create a virtual environment
+
+```bash
 python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+**Windows:**
+
+```bash
 venv\Scripts\activate
 ```
-3. Navigate to the project directory and setup environment:
-```
-cd OfficeOps-WPS
-```
-Create .env File: Create a file named .env in the project directory. Add the following content to the .env file:
-or just rename .env.example to .env
-```
-DATABASE_URL = "postgres://USER:PASSWORD@localhost:5432/DB_NAME"
-SECRET_KEY = "your_secret_key"
-```
-NOTE: Make sure to replace YOUR_USER, YOUR_PASSWORD, YOUR_DB_NAME with your actual database credentials. 
-Also, substitute YOUR_SECRET_KEY with your desired secret key.
 
-4. Install dependencies:
-```
+### 5. Install dependencies
+
+If a `requirements.txt` file is available:
+
+```bash
 pip install -r requirements.txt
 ```
-5. Configure the database settings in settings.py and run migrations:
-```
-python manage.py makemigrations main_app
+
+### 6. Configure the database
+
+Configure the PostgreSQL database settings according to your local environment.
+
+### 7. Apply database migrations
+
+```bash
 python manage.py migrate
 ```
-6. Create a superuser account:
-```
-python manage.py createsuperuser
-```
-7. Start the development server:
-```
+
+### 8. Start the development server
+
+```bash
 python manage.py runserver
 ```
-8. Access the admin panel at http://localhost:8000/ and log in with the superuser credentials.
 
-## Contributing
+Open the local development address:
 
-Contributions are welcome! If you'd like to contribute to OfficeOps-WPS, feel free to open a pull request. We value your input and appreciate your help in making the app even better.
+`http://127.0.0.1:8000/`
 
-## License
+## Project Purpose
 
-This project is licensed under the [MIT License](LICENSE.txt).
+The purpose of Employee LeaveDesk is to provide a convenient and organized solution for workforce administration, helping streamline employee records, attendance, and leave-related activities.
+
+## Future Improvements
+
+- Enhanced dashboard and reporting.
+- Improved role-based access control.
+- Additional workforce analytics.
+- Better user experience and interface improvements.
+
+## Repository
+
+GitHub: https://github.com/2200032645/Employee-LeaveDesk1
+
+---
+
+**Note:** Update the technology stack, setup instructions, and feature list to match the actual code before publishing. Do not include modules or commands that your repository does not support.
